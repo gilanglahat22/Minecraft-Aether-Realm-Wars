@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="root" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" onMouseEntered="#setHovered" onMouseExited="#setUnhovered" prefHeight="125.0" prefWidth="125.0" style="-fx-border-color: black; -fx-border-width: 2; -fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aetherwars.controller.SummonController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="35.0" prefWidth="150.0">
+         <children>
+            <ImageView fx:id="summonAttackIcon" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" top="5.0" />
+               </HBox.margin></ImageView>
+            <Label fx:id="summonAttack" text="1">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+            <ImageView fx:id="summonHealthIcon" fitHeight="15.0" fitWidth="15.0" layoutX="40.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label fx:id="summonHealth" text="1">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <ImageView fx:id="summonImage" fitHeight="90.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="summonExpLevel" text="0/1 [1]" />
+   </children>
+</VBox>

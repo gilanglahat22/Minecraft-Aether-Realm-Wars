@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane prefHeight="420.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aetherwars.controller.BoardController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="176.0" minWidth="10.0" prefWidth="158.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="214.0" minWidth="10.0" prefWidth="139.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.0" minWidth="10.0" prefWidth="154.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="305.0" minHeight="10.0" prefHeight="256.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="329.0" minHeight="10.0" prefHeight="244.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <VBox alignment="CENTER" prefHeight="125.0" prefWidth="125.0">
+         <children>
+            <fx:include fx:id="summon0" source="Summon.fxml" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+         <children>
+            <fx:include fx:id="summon1" source="Summon.fxml" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowSpan="2">
+         <children>
+            <fx:include fx:id="summon4" source="Summon.fxml" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+         <children>
+            <fx:include fx:id="summon2" source="Summon.fxml" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <fx:include fx:id="summon3" source="Summon.fxml" />
+         </children>
+      </VBox>
+   </children>
+</GridPane>

@@ -1,0 +1,3 @@
+id	name	description	imagepath	islevelup
+401	Level Up	Increase one level and reset its exp	card/image/spell/level/Level Up.png	true
+402	Level Down	Decrease one level and reset its exp	card/image/spell/level/Level Down.png	false

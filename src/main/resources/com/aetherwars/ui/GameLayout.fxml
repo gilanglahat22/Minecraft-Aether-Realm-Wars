@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="root" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aetherwars.controller.GameLayoutController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="834.0" minWidth="10.0" prefWidth="581.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="803.0" minWidth="10.0" prefWidth="133.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="803.0" minWidth="10.0" prefWidth="566.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="477.0" minHeight="10.0" prefHeight="77.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="556.0" minHeight="10.0" prefHeight="375.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="483.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="353.0" minHeight="10.0" prefHeight="215.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="150.0" prefWidth="500.0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <children>
+            <fx:include fx:id="hand" source="Hand.fxml" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <children>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="174.0" prefWidth="333.0" style="-fx-border-color: black;">
+               <children>
+                  <VBox prefHeight="172.0" prefWidth="153.0">
+                     <children>
+                        <Label fx:id="hoveredName" text="Sheep">
+                           <font>
+                              <Font name="Arial Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="hoveredAttribute" text="Label" wrapText="true" />
+                     </children>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="11.0" layoutY="11.0" prefHeight="172.0" prefWidth="144.0">
+                     <children>
+                        <Label fx:id="hoveredDescription" text="“Sheep are common passive mobs that supply wool and mutton and are found in many of the grassy biomes.”" wrapText="true">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="215.0" prefWidth="171.0">
+               <children>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="74.0" prefWidth="131.0" style="-fx-border-color: black;">
+                     <children>
+                        <fx:include fx:id="deckRemainingBox" source="Deck.fxml" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="26.0" layoutY="80.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="74.0" prefWidth="131.0" style="-fx-border-color: black;">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <fx:include fx:id="manaBox" source="Mana.fxml" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" maxHeight="190.0" maxWidth="150.0" minHeight="190.0" minWidth="150.0" prefHeight="190.0" prefWidth="150.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <children>
+            <ImageView fx:id="hoveredImage" fitHeight="190.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </HBox>
+      <VBox alignment="CENTER" prefHeight="187.0" prefWidth="178.0" GridPane.rowSpan="2" />
+      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+         <children>
+            <ImageView fx:id="steveImage" fitHeight="125.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" />
+            <fx:include fx:id="steveBoard" source="Board.fxml" />
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <children>
+            <fx:include fx:id="alexBoard" scaleX="-1" source="Board.fxml" />
+            <ImageView fx:id="alexImage" fitHeight="125.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+         <padding>
+            <Insets right="20.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <fx:include fx:id="steveHealth" source="HealthBar.fxml" />
+         </children>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+         <padding>
+            <Insets left="40.0" top="20.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+         <children>
+            <fx:include fx:id="alexHealth" scaleX="-1.0" source="HealthBar.fxml" />
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </HBox>
+      <HBox prefHeight="55.0" prefWidth="1261.0" GridPane.rowIndex="2">
+         <children>
+            <fx:include fx:id="phases" source="Phase.fxml" />
+         </children>
+         <padding>
+            <Insets left="35.0" top="16.0" />
+         </padding>
+      </HBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+         <children>
+            <Label fx:id="turnLabel" text="Turn 1" />
+            <Label fx:id="currentPlayer" text="STEVE">
+               <font>
+                  <Font name="Arial Bold" size="18.0" />
+               </font></Label>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <VBox fx:id="discardHere" alignment="CENTER" prefHeight="87.0" prefWidth="102.0" style="-fx-border-color: black; -fx-background-color: white;">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="DISCARD HERE" textAlignment="CENTER" wrapText="true" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</GridPane>

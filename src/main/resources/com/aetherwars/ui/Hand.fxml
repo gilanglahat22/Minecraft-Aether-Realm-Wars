@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<HBox minHeight="-Infinity" minWidth="-Infinity" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aetherwars.controller.HandController">
+   <children>
+      <fx:include source="Card.fxml" fx:id="card1"/>
+      <fx:include source="Card.fxml" fx:id="card2"/>
+      <fx:include source="Card.fxml" fx:id="card3"/>
+      <fx:include source="Card.fxml" fx:id="card4"/>
+      <fx:include source="Card.fxml" fx:id="card5"/>
+   </children>
+</HBox>
